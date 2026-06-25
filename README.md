@@ -5,43 +5,45 @@
 ![XML](https://img.shields.io/badge/XML-Exportação-orange?style=for-the-badge)
 ![TXT](https://img.shields.io/badge/TXT-Exportação-lightgrey?style=for-the-badge)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge)
 
 ---
 
-## 📌 Sobre o projeto
+# 📌 Sobre o projeto
 
-O **Projeto Agenda** é uma aplicação desenvolvida em **Java** para geração de compromissos com participantes, data, hora e nível de prioridade.
+O **Projeto Agenda** é uma aplicação desenvolvida em **Java** para gerenciamento de compromissos, permitindo registrar eventos com participantes, data, horário e nível de prioridade.
 
-O projeto foi criado com foco na prática de **Programação Orientada a Objetos**, utilizando conceitos como encapsulamento, enumerações, interfaces, polimorfismo, listas, UUID e exportação de dados em arquivos TXT e XML.
-
----
-
-## 🚀 Funcionalidades
-
-* ✅ Geração de compromissos
-* ✅ Associação de participantes ao compromisso
-* ✅ Definição de prioridade
-* ✅ Geração de identificadores únicos com UUID
-* ✅ Exportação de dados em arquivo TXT
-* ✅ Exportação de dados em arquivo XML
-* ✅ Escolha dinâmica do formato de exportação
+O projeto foi desenvolvido com foco na prática de **Programação Orientada a Objetos (POO)**, aplicando conceitos como encapsulamento, interfaces, polimorfismo, enumerações, coleções e exportação de dados em diferentes formatos.
 
 ---
 
-## 🧱 Tecnologias Utilizadas
+# 🚀 Funcionalidades
+
+* Geração de compromissos
+* Associação de participantes ao compromisso
+* Definição de prioridade (Baixa, Média e Alta)
+* Geração automática de identificadores únicos (UUID)
+* Exportação dos dados em arquivo TXT
+* Exportação dos dados em arquivo XML
+* Escolha dinâmica do formato de exportação
+
+---
+
+# 🧱 Tecnologias Utilizadas
 
 * Java
-* Programação Orientada a Objetos
-* Swing / JOptionPane
+* Programação Orientada a Objetos (POO)
+* Java Swing (JOptionPane)
 * UUID
+* Collections (List)
 * LocalDate
 * LocalTime
-* TXT
-* XML
+* Manipulação de arquivos TXT
+* Manipulação de arquivos XML
 
 ---
 
-## 🏗️ Estrutura do Projeto
+# 🏗️ Estrutura do Projeto
 
 ```text
 src/
@@ -55,55 +57,64 @@ src/
 
 ---
 
-## 📊 Arquitetura
+# 📊 Arquitetura
 
 ```text
+Usuário
+      │
+      ▼
 CompromissoController
-        │
-        ▼
+      │
+      ▼
 CompromissoRepository (Interface)
-        │
-        ├── CompromissoRepositoryTXT
-        │
-        └── CompromissoRepositoryXML
-        │
-        ▼
+      │
+      ├── CompromissoRepositoryTXT
+      └── CompromissoRepositoryXML
+      │
+      ▼
 Arquivo TXT ou XML
 ```
 
 ---
 
-## 🧠 Conceitos Aplicados
+# 📦 Exportação dos Dados
 
-* Programação Orientada a Objetos
-* Encapsulamento
-* Enum
-* Interface
-* Polimorfismo
-* Manipulação de arquivos
-* Listas
-* UUID
-* Tratamento de exceções
-* Separação de responsabilidades
-
----
-
-## 📦 Exportação dos Dados
-
-O sistema permite escolher o formato de exportação do compromisso:
+Durante a execução da aplicação, o usuário escolhe o formato desejado para exportação:
 
 ```text
 1 - TXT
 2 - XML
 ```
 
-Após a escolha, o arquivo é gerado contendo os dados do compromisso e seus participantes.
+Após a seleção, é gerado automaticamente um arquivo contendo:
+
+* Identificador do compromisso
+* Título
+* Data
+* Hora
+* Prioridade
+* Lista de participantes
 
 ---
 
-## ⚙️ Como Executar o Projeto
+# 🧠 Conceitos Aplicados
 
-### 1. Clonar o repositório
+* Programação Orientada a Objetos
+* Encapsulamento
+* Interfaces
+* Polimorfismo
+* Enumerações
+* Coleções (List)
+* UUID
+* Manipulação de arquivos
+* Tratamento de exceções
+* Separação de responsabilidades
+
+---
+
+# ⚙️ Como Executar o Projeto
+
+## 1. Clonar o repositório
 
 ```bash
 git clone https://github.com/beatrizlima-tech/projetoAgenda.git
@@ -111,44 +122,58 @@ git clone https://github.com/beatrizlima-tech/projetoAgenda.git
 
 ---
 
-### 2. Abrir em uma IDE Java
+## 2. Abrir o projeto
 
-Abra o projeto em uma IDE de sua preferência, como:
+Abra o projeto em uma IDE Java, como:
 
 * IntelliJ IDEA
 * Eclipse
-* VS Code
+* Visual Studio Code
 
 ---
 
-### 3. Executar a aplicação
+## 3. Executar a aplicação
 
-Execute a classe principal do projeto.
+Execute a classe principal.
 
-Durante a execução, escolha o formato de exportação desejado:
+Durante a execução, escolha o formato de exportação:
 
 ```text
 1 - TXT
 2 - XML
 ```
 
----
-
-## 📌 Melhorias Futuras
-
-* [ ] Permitir cadastro manual dos dados do compromisso
-* [ ] Permitir cadastro manual de participantes
-* [ ] Criar menu com mais opções de gerenciamento
-* [ ] Adicionar persistência em banco de dados
-* [ ] Criar interface gráfica mais completa
-* [ ] Adicionar testes automatizados
-* [ ] Melhorar a formatação do arquivo XML gerado
+O arquivo será gerado automaticamente na pasta do projeto.
 
 ---
 
-## 👩‍💻 Autora
+# 📌 Melhorias Futuras
+
+* Permitir cadastro manual de compromissos
+* Permitir cadastro manual de participantes
+* Criar menu completo para gerenciamento
+* Implementar persistência em banco de dados
+* Desenvolver interface gráfica completa
+* Adicionar testes automatizados
+* Melhorar a formatação dos arquivos XML
+* Adicionar importação de compromissos
+
+---
+
+# 📚 Objetivo
+
+Este projeto foi desenvolvido para consolidar conhecimentos em Programação Orientada a Objetos, aplicando conceitos fundamentais como interfaces, polimorfismo, manipulação de arquivos e organização em camadas, simulando um pequeno sistema de gerenciamento de compromissos.
+
+---
+
+# 👩‍💻 Autora
 
 **Beatriz Lima de Oliveira**
 
-🔗 GitHub:
+🔗 GitHub
+
 https://github.com/beatrizlima-tech
+
+💼 LinkedIn
+
+https://www.linkedin.com/in/beatrizlima-tech
